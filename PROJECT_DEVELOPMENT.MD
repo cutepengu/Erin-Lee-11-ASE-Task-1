@@ -4,7 +4,7 @@
 # Reqirements Definition
 
 ### Functional Requirements
-* Provide users with accurate weather, temperature, pressure, and humidity
+* Provide users with accurate weather, temperature, wind, and humidity
 * Application should detect a problem if user makes a mistake and should suggest a correction
 
 ### Non-Functional Requirements
@@ -23,7 +23,7 @@
 
 # Design
 ## Data Dictionary
-
+![Data Dictionary](/images/datadictionary.png "Data Dictionary")
 ## Structure Chart
 
 ## Flowchart
