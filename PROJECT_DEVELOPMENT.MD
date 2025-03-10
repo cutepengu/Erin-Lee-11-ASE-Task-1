@@ -25,7 +25,7 @@
 ## Data Dictionary
 ![Data Dictionary](/images/datadictionary.png "Data Dictionary")
 ## Structure Chart
-
+![Structure Chart](/images/structurechart.png "Structure Chart")
 ## Flowchart
 
 ## Pseudocode
