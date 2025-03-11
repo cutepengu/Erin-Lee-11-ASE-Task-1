@@ -27,9 +27,9 @@
 ## Structure Chart
 ![Structure Chart](/images/structurechart.png "Structure Chart")
 ## Flowchart
-
+![FlowChart](/images/flowchart.png "Flowchart")
 ## Pseudocode
-
+![FPseudocode](/images/pseudocode.png "Pseudocode")
 ## Gantt Chart
 
 # Development
