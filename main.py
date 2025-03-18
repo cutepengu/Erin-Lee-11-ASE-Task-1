@@ -1,8 +1,8 @@
 import requests
 
-api_key = "a57d8a0f5879541e7269eed5af654bfc"
+api_key = "413330cdc1d441ff8ca222024251803"
 
-base_url = "https://weatherstack.com/"
+base_url = "http://api.weatherapi.com/v1"
 
 def fetch_weather(city_name):
     """
@@ -25,15 +25,15 @@ def display_weather_info(weather_data):
         region = weather_data["location"]["region"]  
         country = weather_data["location"]["country"]  
         temperature = weather_data["current"]["temp_c"]  
-        weather = weather_data["current"]["weather"]["text"]  
-        wind = weather_data["current"]["wind"]["__km/h"]
-        humidity = weather_data["current"]["humidity"]["__%"]
+        #weather = weather_data["current"]["weather"]["text"]  
+        #wind = weather_data["current"]["wind"]["__km/h"]
+        #humidity = weather_data["current"]["humidity"]["__%"]
 
         print(f"Weather in {location}, {region}, {country}:")
         print(f"Temperature: {temperature}°C")
-        print(f"Weather: {weather}")
-        print(f"Wind: {wind}km/h")
-        print(f"Humidity: {humidity}%")
+        #print(f"Weather: {weather}")
+        #print(f"Wind: {wind}km/h")
+        #print(f"Humidity: {humidity}%")
     else:
         print("Error retrieving weather data.")
 
