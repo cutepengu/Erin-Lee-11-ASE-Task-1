@@ -20,24 +20,28 @@ def display_weather_info(weather_data):
     Displays weather information from the API response.
     """
     if weather_data:
-        # Extract relevant data from the API response
         location = weather_data["location"]["name"]  
         region = weather_data["location"]["region"]  
         country = weather_data["location"]["country"]  
         temperature = weather_data["current"]["temp_c"]  
-        #weather = weather_data["current"]["weather"]["text"]  
-        #wind = weather_data["current"]["wind"]["__km/h"]
-        #humidity = weather_data["current"]["humidity"]["__%"]
+        condition = weather_data["current"]["condition"]["text"]
+        humidity = weather_data["current"]["humidity"]["int"]
+        wind_kph = weather_data["current"]["wind_kph"]["decimal"]
+
 
         print(f"Weather in {location}, {region}, {country}:")
         print(f"Temperature: {temperature}°C")
-        #print(f"Weather: {weather}")
-        #print(f"Wind: {wind}km/h")
-        #print(f"Humidity: {humidity}%")
+        print(f"Condition: {condition}")
+        print(f"Humidity: {humidity}%")
+        print(f"Wind: {wind_kph}km/h")
+    
     else:
         print("Error retrieving weather data.")
 
 def main():
-    display_weather_info(fetch_weather('Sydney'))
+    city =input("Enter city name: ")
+
+    display_weather_info(fetch_weather(city))
 
 main()
+
