@@ -25,18 +25,18 @@ def display_weather_info(weather_data):
         country = weather_data["location"]["country"]  
         temperature = weather_data["current"]["temp_c"]  
         condition = weather_data["current"]["condition"]["text"]
-        humidity = weather_data["current"]["humidity"]["int"]
-        wind_kph = weather_data["current"]["wind_kph"]["decimal"]
+        humidity = weather_data["current"]["humidity"]
+        wind = weather_data["current"]["wind_kph"]
 
 
         print(f"Weather in {location}, {region}, {country}:")
         print(f"Temperature: {temperature}°C")
         print(f"Condition: {condition}")
         print(f"Humidity: {humidity}%")
-        print(f"Wind: {wind_kph}km/h")
+        print(f"Wind: {wind}km/h")
     
     else:
-        print("Error retrieving weather data.")
+        print("Error retrieving weather data. Please check if you made a spelling mistake in your input for location.")
 
 def main():
     city =input("Enter city name: ")
