@@ -4,12 +4,14 @@
 # Reqirements Definition
 
 ### Functional Requirements
-* Provide users with accurate weather, temperature, wind, and humidity
+* Provide users with accurate weather condition, temperature, wind, and humidity
 * Application should detect a problem if user makes a mistake and should suggest a correction
+* Application should be able to do simple stuff such as accepting all capital and lower case letters
 
 ### Non-Functional Requirements
 * Allow clear visualisation of the application
 * Display the output clear and fast for enhanced convenience in users
+* Make it easier for users to use by making inputs easier to understand
 
 # Determining Specfications
 ### Functional Specifications
