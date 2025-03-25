@@ -45,7 +45,7 @@ base_url = "http://api.weatherapi.com/v1"
 
 def fetch_weather(city_name):
     """
-    Fetches the current weather data for a given city using WeatherStack.
+    Fetches the current weather data for a given city using WeatherAPI.
     """
     complete_url = f"{base_url}/current.json?key={api_key}&q={city_name}"
     response = requests.get(complete_url)
