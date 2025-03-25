@@ -88,7 +88,9 @@ in the code file main.py
 https://github.com/cutepengu/Erin-Lee-11-ASE-Task-1
 ### Peer Feedback (Maksim):
 This program runs very efficiently and provides the user with satisfactory results considering what they are trying to search up. The program is very easy to understand and can be very informative if you need the weather in a certain city. To improve, the results could be displayed better to give the user a better experience.
-### Peer Feedback (name):
+
+### Peer Feedback (Ario):
+It displayed the necessary information for users to visualise with a quick response and was able to correct errors and provide a suggestion for users. However I could not enter another city after the program displayed data for a city I previously wanted which made me have to rerun the program. For an area of improvement, I would suggest working on allowing users to ask for 2 or more cities without having to run it again.
 
 # Installation
 ## READ ME:
