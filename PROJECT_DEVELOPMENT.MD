@@ -31,17 +31,63 @@
 ## Flowchart
 ![FlowChart](/images/flowchart.png "Flowchart")
 ## Pseudocode
-![FPseudocode](/images/pseudocode.png "Pseudocode")
+![Pseudocode](/images/pseudocode.png "Pseudocode")
 ## Gantt Chart
-
+![Gantt Chart](/images/ganttchart.png "Gantt Chart")
 # Development
-in the code file main.py
+import requests
+
+api_key = "413330cdc1d441ff8ca222024251803"
+
+base_url = "http://api.weatherapi.com/v1"
+
+def fetch_weather(city_name):
+    """
+    Fetches the current weather data for a given city using WeatherStack.
+    """
+    complete_url = f"{base_url}/current.json?key={api_key}&q={city_name}"
+    response = requests.get(complete_url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+    
+def display_weather_info(weather_data):
+    """
+    Displays weather information from the API response.
+    """
+    if weather_data:
+        location = weather_data["location"]["name"]  
+        region = weather_data["location"]["region"]  
+        country = weather_data["location"]["country"]  
+        temperature = weather_data["current"]["temp_c"]  
+        condition = weather_data["current"]["condition"]["text"]
+        humidity = weather_data["current"]["humidity"]
+        wind = weather_data["current"]["wind_kph"]
+
+
+        print(f"Weather in {location}, {region}, {country}:")
+        print(f"Temperature: {temperature}°C")
+        print(f"Condition: {condition}")
+        print(f"Humidity: {humidity}%")
+        print(f"Wind: {wind}km/h")
+    
+    else:
+        print("Error retrieving weather data. Please check if you made a spelling mistake in your input for location.")
+
+def main():
+    city =input("Enter city name: ")
+
+    display_weather_info(fetch_weather(city))
+
+main()
 # Integration
 in the code file main.py
 # Testing and Debugging
-
-### Peer Feedback (name):
-
+#### This is the Testing and Debugging steps I took to successfully create my project.
+https://github.com/cutepengu/Erin-Lee-11-ASE-Task-1
+### Peer Feedback (Maksim):
+This program runs very efficiently and provides the user with satisfactory results considering what they are trying to search up. The program is very easy to understand and can be very informative if you need the weather in a certain city. To improve, the results could be displayed better to give the user a better experience.
 ### Peer Feedback (name):
 
 # Installation
@@ -74,3 +120,5 @@ I previously thought that providing users with data in a worded format was the b
 
 ### 3. Evaluate how the project was managed throughout its development and maintenance, including your time management and how challenges were addressed during the software development lifecycle.
 All throughout the development of my project, I believe that I did well at updating the project on Github each time I worked on it as I could go back to my summary and see what I worked up to. The coding part made it especially useful as I faced hardships in the coding part of the project and I have always mentioned an error so it was way faster for me to get a recap of what I was struggling with the last lesson or the last time I worked on for the project. I constantly updated my gantt chart and this was able to help me from having to rush certain things as I could plan the whole project as I went. 
+
+
