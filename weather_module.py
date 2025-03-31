@@ -28,24 +28,33 @@ def display_weather_info(weather_data):
         humidity = weather_data["current"]["humidity"]
         wind = weather_data["current"]["wind_kph"]
     
-    data = input("Enter data you require from either temperature, condition, wind, or humidity: ")
-    print(f"Weather in {location}, {region}, {country}:")
-    if data == condition:
-     print(f"Condition: {condition}")
-    elif data == temperature:
-     print(f"Temperature: {temperature}°C")
-    elif data == wind:
-     print(f"Wind: {wind}km/h")
-    elif data == humidity:
-     print(f"Humidity: {humidity}%")
-    else:
-     print("Error retrieving weather data. Please check if you made a spelling mistake in your input.")
+        option = input("Enter the number for the data required shown below: \n"
+                       "1 - Condition\n"
+                       "2 - Temperature\n"
+                       "3 - Humidity\n"
+                       "4 - Wind\n")
+        
+        if option == '1':
+            print(f"Weather in {location}, {region}, {country}:")
+            print(f"Condition: {condition}")
 
-       
+        elif option == '2':
+            print(f"Weather in {location}, {region}, {country}:")
+            print(f"Temperature: {temperature}°C")
+        elif option == '3':
+            print(f"Weather in {location}, {region}, {country}:")
+            print(f"Humidity: {humidity}%")
+        elif option == '4':
+            print(f"Weather in {location}, {region}, {country}:")
+            print(f"Wind: {wind}km/h")
+    
+    else:
+        print("Error retrieving weather data. Please check if you made a spelling mistake in your input for location.")
 
 def main():
     city =input("Enter city name: ")
 
     display_weather_info(fetch_weather(city))
+
 main()
 

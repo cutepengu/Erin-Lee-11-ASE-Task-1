@@ -67,18 +67,15 @@ def display_weather_info(weather_data):
         humidity = weather_data["current"]["humidity"]
         wind = weather_data["current"]["wind_kph"]
     
-    data = input("Enter data you require from either temperature, condition, wind, or humidity: ")
-     print(f"Weather in {location}, {region}, {country}:")
-    if data == condition:
-     print(f"Condition: {condition}")
-    elif data == temperature:
-     print(f"Temperature: {temperature}°C")
-    elif data == wind:
-     print(f"Wind: {wind}km/h")
-    elif data == humidity:
-     print(f"Humidity: {humidity}%")
+        
+        print(f"Weather in {location}, {region}, {country}:")
+        print(f"Condition: {condition}")
+        print(f"Temperature: {temperature}°C")
+        print(f"Humidity: {humidity}%")
+        print(f"Wind: {wind}km/h")
+    
     else:
-     print("Error retrieving weather data. Please check if you made a spelling mistake in your input.")
+        print("Error retrieving weather data. Please check if you made a spelling mistake in your input for location.")
 
 def main():
     city =input("Enter city name: ")
@@ -86,6 +83,8 @@ def main():
     display_weather_info(fetch_weather(city))
 
 main()
+
+
 # Integration
 in the code file main.py
 # Testing and Debugging
