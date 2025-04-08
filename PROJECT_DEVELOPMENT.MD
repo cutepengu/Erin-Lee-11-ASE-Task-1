@@ -44,7 +44,7 @@
 ![Weather Module](/images/weather_module.png "Weather Module")
 # Testing and Debugging
 #### This is the Testing and Debugging steps I took to successfully create my project.
-https://github.com/cutepengu/Erin-Lee-11-ASE-Task-1
+https://github.com/cutepengu/Erin-Lee-11-ASE-Task-1/commits?author=cutepengu
 ### Peer Feedback (Maksim):
 This program runs very efficiently and provides the user with satisfactory results considering what they are trying to search up. The program is very easy to understand and can be very informative if you need the weather in a certain city. To improve, the results could be displayed better to give the user a better experience.
 
