@@ -1,4 +1,4 @@
-import requests
+import requests # Imported the code in weather_module.py
 from weather_module import *
 
 def main():

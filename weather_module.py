@@ -1,8 +1,8 @@
 import requests
 
-api_key = "413330cdc1d441ff8ca222024251803"
+api_key = "413330cdc1d441ff8ca222024251803" # My API key
 
-base_url = "http://api.weatherapi.com/v1"
+base_url = "http://api.weatherapi.com/v1" # API site I extracted my data from
 
 def fetch_weather(city_name):
     """
@@ -19,7 +19,7 @@ def display_weather_info(weather_data):
     """
     Displays weather information from the API response.
     """
-    if weather_data:
+    if weather_data: # Below are the options users can choose from
         location = weather_data["location"]["name"]  
         region = weather_data["location"]["region"]  
         country = weather_data["location"]["country"]  
@@ -28,6 +28,7 @@ def display_weather_info(weather_data):
         humidity = weather_data["current"]["humidity"]
         wind = weather_data["current"]["wind_kph"]
     
+        # The code below allows users to enter a number instead of having to type up what they want to see
         option = input("Enter the number for the data required shown below: \n"
                        "1 - Condition\n"
                        "2 - Temperature\n"
@@ -48,7 +49,7 @@ def display_weather_info(weather_data):
             print(f"Weather in {location}, {region}, {country}:")
             print(f"Wind: {wind}km/h")
     
-    else:
+    else: # The print statement below allows users to observe that they made an error in their input
         print("Error retrieving weather data. Please check if you made a spelling mistake in your input for location.")
 
 def main():

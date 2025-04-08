@@ -5,8 +5,9 @@
 
 ### Functional Requirements
 * Provide users with accurate weather condition, temperature, wind, and humidity
-* Application should detect a problem if user makes a mistake and should suggest a correction
-* Application should be able to do simple stuff such as accepting all capital and lower case letters
+* Application should detect a problem if user makes a mistake and should suggest/make a correction
+* Application should be able to do simple stuff such as accepting all capital and lower case letters 
+* Application should be able to automatically correct any spelling mistakes and display the most suitable output for users
 
 ### Non-Functional Requirements
 * Allow clear visualisation of the application
